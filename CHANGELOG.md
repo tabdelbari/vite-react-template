@@ -4,21 +4,44 @@
 
 ### Project Creation
 - Created a new Vite + React + TypeScript project
+  ```bash
+  npm create vite@latest . -- --template react-ts
+  ```
 - Set up ESLint and Prettier for code quality
+  ```bash
+  npm install -D @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint eslint-config-prettier eslint-plugin-react eslint-plugin-react-hooks prettier
+  ```
 - Configured TypeScript support
+  ```bash
+  npm install --save-dev @types/node
+  ```
 
 ### Dependencies Installation
 - Added core dependencies:
-  - React Query (TanStack Query) for API calls
-  - Material-UI for styling and components
-  - React Router for navigation
-  - Axios for HTTP requests
-  - i18next for internationalization
-  - React Hook Form for form handling
-  - Yup for form validation
+  ```bash
+  # React Query and DevTools
+  npm install @tanstack/react-query @tanstack/react-query-devtools
+
+  # Material-UI and Icons
+  npm install @mui/material @mui/icons-material @emotion/react @emotion/styled
+
+  # Routing and API
+  npm install react-router-dom axios
+
+  # Form Handling and Validation
+  npm install @hookform/resolvers zod react-hook-form
+
+  # Internationalization
+  npm install i18next react-i18next i18next-browser-languagedetector
+  ```
 
 ### Project Structure
 Created a well-organized directory structure:
+```bash
+mkdir src\components src\pages src\hooks src\services src\utils src\types src\layouts src\theme src\config src\assets src\contexts src\locales
+```
+
+Directory structure:
 ```
 src/
 ├── components/     # Reusable UI components
@@ -39,75 +62,70 @@ src/
 
 ### ESLint Configuration
 - Set up ESLint with React and TypeScript support
-- Added rules for React hooks and JSX
-- Configured Prettier integration
+  ```bash
+  # ESLint configuration was added to .eslintrc.json
+  ```
 
 ### Prettier Configuration
 - Set up code formatting rules:
-  - 2 spaces indentation
-  - Single quotes
-  - Trailing commas
-  - 100 characters line length
-  - No semicolons
+  ```bash
+  # Prettier configuration was added to .prettierrc
+  ```
 
 ### Theme Configuration
 - Created Material-UI theme with:
-  - Custom color palette
-  - Typography settings
-  - Component style overrides
-  - Responsive breakpoints
+  ```bash
+  # Theme configuration was added to src/theme/theme.ts
+  ```
 
 ### API Configuration
 - Set up Axios instance with:
-  - Base URL configuration
-  - Request/response interceptors
-  - Error handling
-  - Authentication token management
+  ```bash
+  # API configuration was added to src/config/axios.ts
+  ```
 
 ### i18n Setup
 - Added internationalization support with:
-  - English and French translations
-  - Language detection
-  - Local storage persistence
-  - Language switcher component
+  ```bash
+  # Created translation files:
+  # - src/locales/en.json
+  # - src/locales/fr.json
+  # - src/config/i18n.ts
+  ```
 
 ## Styling and Layout
 
 ### Global Styles
 - Added global CSS rules:
-  - Full viewport height
-  - Reset margins and padding
-  - Font smoothing
-  - Overflow handling
+  ```bash
+  # Created src/styles/global.css
+  ```
 
 ### Layout Components
 - Created MainLayout with:
-  - Sticky header
-  - Responsive container
-  - Proper content spacing
-  - Language switcher integration
+  ```bash
+  # Created src/layouts/MainLayout.tsx
+  ```
 
 ## Features Implementation
 
 ### API Integration
 - Created custom API hook with:
-  - GET, POST, PUT, DELETE methods
-  - TypeScript support
-  - Error handling
-  - Query caching
+  ```bash
+  # Created src/hooks/useApi.ts
+  ```
 
 ### Internationalization
 - Implemented translation system:
-  - JSON-based translations
-  - Language detection
-  - Dynamic language switching
-  - Namespaced translations
+  ```bash
+  # Created src/components/LanguageSwitcher.tsx
+  ```
 
 ### Routing
 - Set up React Router with:
-  - Basic route structure
-  - Layout integration
-  - Route protection (prepared for future implementation)
+  ```bash
+  # Updated src/App.tsx with routing configuration
+  ```
 
 ## Development Guidelines
 
@@ -141,4 +159,20 @@ src/
 - Set up testing environment
 - Add error boundaries
 - Implement loading states
-- Add more language support 
+- Add more language support
+
+## Running the Project
+To start the development server:
+```bash
+npm run dev
+```
+
+To build for production:
+```bash
+npm run build
+```
+
+To preview the production build:
+```bash
+npm run preview
+``` 
