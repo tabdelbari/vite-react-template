@@ -8,6 +8,8 @@ import { MainLayout } from './layouts/MainLayout';
 import { Routes, Route } from 'react-router-dom';
 import './config/i18n'; // Import i18n configuration
 import './styles/global.css';
+import { ValidateTokenPage } from './pages/ValidateTokenPage';
+import { ErrorPage } from './pages/ErrorPage';
 
 // Create a client
 const queryClient = new QueryClient({
@@ -27,8 +29,10 @@ function App() {
         <BrowserRouter>
           <MainLayout>
             <Routes>
-              {/* Add your routes here */}
-              <Route path="/" element={<div>Home Page</div>} />
+              <Route path="/:token" element={<ValidateTokenPage />} />
+              <Route path="/401" element={<ErrorPage statusCode={401} />} />
+              <Route path="/500" element={<ErrorPage statusCode={500} />} />
+              <Route path="*" element={<ErrorPage statusCode={404} />} />
             </Routes>
           </MainLayout>
         </BrowserRouter>

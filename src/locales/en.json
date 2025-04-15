@@ -7,7 +7,8 @@
     "save": "Save",
     "cancel": "Cancel",
     "delete": "Delete",
-    "edit": "Edit"
+    "edit": "Edit",
+    "backToHome": "Back to Home"
   },
   "navigation": {
     "home": "Home",
@@ -20,5 +21,12 @@
     "register": "Register",
     "email": "Email",
     "password": "Password"
+  },
+  "errors": {
+    "unauthorized": "You are not authorized to access this page",
+    "notFound": "The page you are looking for doesn't exist",
+    "serverError": "Something went wrong on our end",
+    "unknownError": "An unknown error occurred",
+    "invalidToken": "Invalid or expired token"
   }
 } 
